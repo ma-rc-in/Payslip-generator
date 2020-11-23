@@ -111,9 +111,6 @@ namespace payrollSystem
 
                 grossDeductions = gross - (insurance + tax);
 
-                //do zrobienia flowchart oraz alghoritms  
-
-
                 rtxSummary.Text = "Employee ID: " + ID + "\n" + "Forename: " + name + "\n" + "Surname: " + surname + "\n" + "Income:" + "\n" + "Gross: " + "£" + gross + "\n" + "Gross + deductions (TAX + NI): " + "£" + grossDeductions;
             }
             catch
@@ -177,10 +174,12 @@ namespace payrollSystem
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            Font myfont = new Font("Arial", 16, FontStyle.Italic);
-            Brush myBrush = new SolidBrush(Color.Blue);
+            Font myFont = new Font("Arial", 20, FontStyle.Italic);
+            Brush myBrush = new SolidBrush(Color.Black);
 
-            e.Graphics.DrawString("Marcin", myfont, myBrush, 0, 0);
+            e.Graphics.DrawString(rtxSummary.Text, myFont, myBrush, 20, 20);
+
+            //or e.Graphics.DrawString(rtxSummary.Text, new Font("Arial", 20, FontStyle.Regular), Brushes.Black, 20, 20);
         }
     }
 }
