@@ -106,7 +106,7 @@ namespace payrollSystem
 
                 if (hours > 37)
                 {
-                    gross = gross * overtime;
+                    gross *= overtime;
                 }
 
                 grossDeductions = gross - (insurance + tax);
