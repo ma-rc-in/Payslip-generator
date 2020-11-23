@@ -167,7 +167,7 @@ namespace payrollSystem
             DialogResult printResponse;
             printResponse = printDialog1.ShowDialog();
             if (printResponse == DialogResult.OK)
-                printDocument1.Print();
+                printDocument1.Print(); //needs fixing
         }
 
         private void printPreviewDialog1_Click(object sender, EventArgs e)
