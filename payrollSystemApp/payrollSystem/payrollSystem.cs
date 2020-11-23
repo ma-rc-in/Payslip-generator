@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Printing;
-
 using System.Windows.Forms;
 
 
@@ -138,7 +137,6 @@ namespace payrollSystem
 
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
 
-            // Confirm user wants to close
             switch (MessageBox.Show(this, "Are you sure you want to close the program?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.No:
